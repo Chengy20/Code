@@ -1,0 +1,178 @@
+What is our overall objective?
+
+Create an AI that is able to achieve 150 points as fast as possible, to beat other AIs.
+
+If a 7 is rolled, go back to stage one until done
+
+What is our planned method?
+
+	1. Mr Pass – starts spinoff if it has necessary resources, otherwise it passes. This is required.
+	2. ..
+	3. ..
+	4. …
+	
+	
+CONSIDER:
+
+Necessity of which resources to win?
+
+THD, BPS, BQN, MJ, MTV, MMONEY
+
+Where will the AI source its KPI points from?
+
+10 – Per Campus
+20 – Per GO8 Campus
+2 – Per Arc Grant
+10 – Per IP
+10 – Most publications
+10 – Most Arc Grants
+
+150 Needed to win.
+
+Requirements
+
+Campus – BPS , BQN, MJ, MTV
+Converting a campus to a GO8 campus - 2x(MJ), 3x(MMONEY)
+Owning an ARC grant - BQN, BPS
+Start a business spinoff (1/3 chance of patenting) - MJ,MTV,MMONEY
+
+BENEFITS
+
+Campus – grants 1 resource of surrounding discipline per turn.
+GO8 Campus – grants 2 resource of surrounding discipline per turn.
+
+START WITH
+
+Campus – 2.
+
+BPS – 3.
+BQN – 3.
+MTV – 1.
+MJ – 1.
+MMONEY – 1.
+THD – 0.
+
+VALUE
+
+BPS              – Low-Moderate (Campus, arc).
+BQN            –  Low-Moderate (Campus, arc).
+MTV            – High-Moderate (Campus, spinoff).
+MJ               – Highest (Business spinoff, GO8 and campus).
+MMONEY   – Moderate (spinoff, GO8).
+THD             – Zero (Nothing)
+
+NECESSITIES FOR VICTORY
+
+	1. Business spinoffs.
+	2. Campuses at the most important resources.
+	3. Arc grants to connect these campuses for expansion.
+	4. GO8 Campuses at most important resources.
+
+STAGES OF GAMEPLAY 
+	
+mechanicalTurk.c Plan
+
+STAGE 1 – EXPANSION AND COLLECTION:
+
+ACTIONS:
+	• Locate nearby resources deemed important
+	• Calculate most profitable path of expansion
+	• Build arcs outwards
+	• Build campuses at chosen points
+	• If blocked by another player: Either end stage or attempt second best expansion point
+	• Stop at a deemed point (decide through playtesting or stop when efficiency of path drops and future expansion will solely serve costly to overall objective)
+	
+REQUIRED RESOURCES:
+	- Campus : 4, Spinoff : 2, Arc : 2, GO8 : 2
+	• MJ – Highest Constant (Campus + Spinoff + GO8) 
+	• MTV – High Relevance (Campus + Spinoff)
+	• BPS – Moderate Relevance (Campus + Arc)
+	• BQN– Moderate Relevance (Campus + Arc)
+	• MMONEY – Low-Moderate Relevance, High Future (Spinoff + GO8) 
+
+REQUIRED RESOURCES:
+	• MJ – 7
+	• MTV – 6
+	• BPS – 4
+	• BQN– 4
+	• MMONEY – 8
+	• THD – 0
+
+
+REQUIRED FUNCTIONS:
+	• mostProfitable(dice, disciplines, Game g, position_a, position_b). //two campuses to begin with.
+	• blockedExpansion(dice, disciplines, Game g, positionWhenBlocked, blockedVertex). //consider if expanding through arc or campus building.
+	
+STAGE 2 – UPGRADES
+
+Short round.
+
+ACTIONS:
+	• Upgrade most important few campuses to GO8s
+	• Make decision dependent on what resources have been collected so far
+	• If arc extensions are available buy them as BPS and BQN are not needed for spinoff (mathematically guaranteed 6 > 3.33 average)
+	
+REQUIRED RESOURCES:
+	- Which campus will be the most important?
+	- MJ,MTV,MMONEY
+	• MJ – Highest Relevance(Campus + Spinoff + GO8)
+	• MTV – High Relevance (Campus + Spinoff)
+	• MMONEY – Highest Relevance, High Future (Spinoff + GO8)
+	• BPS – Low Relevance (Campus + Arc)
+	• BQN– Low Relevance (Campus + Arc)
+	
+REQUIRED RESOURCES:
+	• MJ – 10
+	• MTV – 10
+	• BPS – 4
+	• BQN– 4
+	• MMONEY – 10
+	• THD – 0
+	
+REQUIRED FUNCTIONS:
+	• MostNecessary(Game g) //use maths to calculate what needs upgrading (so spinoffs will have equal by end)
+	
+
+STAGE 3 – SPINOFF FOCUS - Win
+
+Short round.
+
+ACTIONS:
+	• Purchase spinoffs
+	
+REQUIRED RESOURCES:
+	• MJ – Highest Relevance(Campus + Spinoff + GO8)
+	• MTV – High Relevance (Campus + Spinoff)
+	• MMONEY – Highest Relevance, High Future (Spinoff + GO8)
+	• BPS – No Relevance (Campus + Arc)
+	• BQN– No Relevance (Campus + Arc)
+	
+REQUIRED FUNCTIONS:
+
+NOTES
+
+
+Goal: 150 KPI points
+
+1/11 turns every MTV + MMONEY -> THD (when a 7 is rolled).
+
+Have you seriously not learnt the rules
+https://www.openlearning.com/unswcourses/courses/2017HS1917/KI/GeographicModel
+https://www.openlearning.com/unswcourses/courses/2017HS1917/Activities/MechanicalturkC
+Spinoff – 33% chance of IP, else publication.
+
+Chat ~
+Convert a normal campus into a GO8 campus
+there can be at most 8 GO8 campuses, no more can be created after the first 8
+
+From <https://www.openlearning.com/rendering/xcomponent/rich-text-display/?version=latest&uid=94525621b3&logLevel=error&xcomponent=1> 
+
+Do we prioritise getting one of these first????
+
+
+Double GO8Values(Game g); //what is needed for GO8 builds (only necessary to identify big surpluses).
+Double mostProfitable(Game g);
+
+
+
+
