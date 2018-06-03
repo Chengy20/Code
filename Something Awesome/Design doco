@@ -1,0 +1,112 @@
+Canvas Games
+Major Project
+Project Title: Tag
+General Info
+Developer Name:	Zachary Cheng
+Type of Game:	Tag game - > 1 person
+Target Audience:	People that have friends
+Project Summary
+Project Description:	You are circles and you run around in a maze. I will also create a map creator if I have time. If you tag another circle, that person will become it, and you will have a speed bonus to run away. There will be a time limit (3 minutes) and the person who has been it the most will lose.
+Design Specifications:	Circles, User movement, Map choice, Timer, Collision detection	
+Required functionality/Content:	[Summary of what your game will need to do – what are the main features? What content will need to be included?] The game will need to allow for more than one person to move around using a keyboard
+Research and Development Required:	How to create a map. Parent & Sub-classes
+Project Outline
+Detailed Description
+
+The aim of the game is for the ‘it’ person is tag the ‘non-it'.
+Plot:
+
+In the beginning, there were 5 gods. 
+Each owned their own respective power. 
+Fire, ice, ground, wind and magic, these five gods were extremely powerful.
+For hundreds of eons, these 5 gods lived in accordence with three rules.
+1. Don't touch other gods
+2. Don't meddle with matters not your own
+3. Don't create any other sentient beings
+It was until the 142nd recursion of the universe, when the magic god, bored with his life chose to break the most important rule, the third one.
+He made a creature with magic, which he called a human, which was capable of replicating the basic features of each god.
+He had to sacrifice a bit of himself to make each human, so each human was capable of magic.
+
+The other four gods made a prison, with their elements, using fire to create a core, ice and fire to create an ocean,
+ground to create land and wind to fill it with an atmosphere.
+This was a prison, created to hold the magic god for an eternity.
+
+After countless eras of wasting away, the magic god was nothing but a touch.
+Unable to do anything, he could only transfer himself from host to host, if they had magic capabilities like he once did.
+
+21st century...
+Tag. Many kids have played the game, but unbeknownst to them, they have been playing a game that has is as old as their species.
+The 'it' as they call it these days is actually an ancient being, so split up that he is incapable of producing a single thought.
+However, this century, there has been an creation of the great tag games and all the best 'taggers' in the world have come together to a single place.
+
+Suprisingly, you and your three friends have found your way to the top of the tournement.
+The timer starts, 10, 9,8...
+You prepare yourself for when the timer hits zero but...it doesn't?
+"Nani?" you whisper to yourself.	
+You are in a maze, seperated by your friends when you recieve a message;
+"One of you has the enemy, a god, which we must destroy
+The one that is tagged the longest will have the most essence of him, and will therefore be eliminated
+You have each been assigned an element, to help you in your task
+There is no escape, there is no breaking out, there is only running
+Let the games begin"
+
+Game –
+The game will be played with a keyboard, preferably all on one keyboard. Everyone fitting on one keyboard may be squishy but it will do.
+The controls for players are (Right, Left, Up, Down) 1. ADWS 2. FHTG 3. JLIK 4. (Arrow Keys)
+
+The game will work by having individual players running (maybe a single player mode – coming soon) away from each other.
+
+Scoring will work by having a timer on each player, and the player with the highest timer loses.
+
+
+Key Features
+ [Must have/non-negotiable]
+Object movement via user input
+Walls that stop movement
+Touching other people makes them it
+[Should have]
+Different types of maps for choice
+[Nice to have]
+Special powers for each player
+Menu
+Moving walls with levers
+[Trimmings]
+Portals
+More than 4 types
+Map creator
+Single player mode for when you have no friends
+
+Design Requirements
+Technical requirements
+Input/Output Requirements
+Keyboard information
+System Requirements
+Computer with keybaord
+Development Requirements
+Brackets, browser, keyboard
+UI Design 
+Users will interact using the keyboard 
+Program Design
+
+Object	Properties	Methods
+Player	x , y , dx , dy , special ability , isIt , colour , starting corner, time it, direction facing	Draw , move , special ability, 
+Wall	x, y , moving(maybe), colour, 	draw, move(optional)
+		
+		
+
+Milestones
+
+Task	Completion Time	Completed
+[Task/step description]	[Time to complete]	[Y/N and date]
+e.g. Program Description	Day 2	Y
+Basic Player using ball	Day 3	Y
+Basic Player touching wall	Day 5	Y
+Easy way to create a map	Day 7	Y
+Two players ‘it’	Day 9 	Y
+Introducing Gravity Day 12 Y
+Ladders and platforms Day 13 Y
+Other features to add Day 17 Y
+Playing with friends Day 20 Y
+
+
+
